@@ -1,0 +1,1 @@
+# Grintsys.DomainDrivenArchtectureSample
