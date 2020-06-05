@@ -4,14 +4,16 @@ using Grintsys.SROverview.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Grintsys.SROverview.Migrations
 {
     [DbContext(typeof(SROverviewDbContext))]
-    partial class SROverviewDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200526154244_AddClientEntity")]
+    partial class AddClientEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1523,8 +1525,7 @@ namespace Grintsys.SROverview.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Celphone")
-                        .HasColumnType("nvarchar(10)")
-                        .HasMaxLength(10);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Code")
                         .HasColumnType("nvarchar(max)");
@@ -1548,12 +1549,10 @@ namespace Grintsys.SROverview.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(100)")
-                        .HasMaxLength(100);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(10)")
-                        .HasMaxLength(10);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Sexo")
                         .HasColumnType("int");

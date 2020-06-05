@@ -4,14 +4,16 @@ using Grintsys.SROverview.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Grintsys.SROverview.Migrations
 {
     [DbContext(typeof(SROverviewDbContext))]
-    partial class SROverviewDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200526154524_AddedDataNotationOnClient")]
+    partial class AddedDataNotationOnClient
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

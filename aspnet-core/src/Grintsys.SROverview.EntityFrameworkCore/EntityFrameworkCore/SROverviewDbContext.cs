@@ -3,6 +3,7 @@ using Abp.Zero.EntityFrameworkCore;
 using Grintsys.SROverview.Authorization.Roles;
 using Grintsys.SROverview.Authorization.Users;
 using Grintsys.SROverview.MultiTenancy;
+using Grintsys.SROverview.Clients;
 
 namespace Grintsys.SROverview.EntityFrameworkCore
 {
@@ -14,5 +15,6 @@ namespace Grintsys.SROverview.EntityFrameworkCore
             : base(options)
         {
         }
+        public DbSet<Client> Client { get; set; } 
     }
 }
